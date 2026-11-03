@@ -620,6 +620,162 @@ ul { list-style: none; }
 .img-skeleton { background: linear-gradient(90deg, #F0F1F2 25%, #E5E7E8 50%, #F0F1F2 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; }
 @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
 
+/* ---------- BUSINESS PARTNERS ---------- */
+.partners-section {
+  overflow: hidden;
+  padding: 80px 0 40px;
+}
+
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 50px;
+  width: max-content;
+  align-items: center;
+}
+
+/* --- LOGO PARTNER (UKURAN DIPERBESAR & WARNA ASLI) --- */
+.partner-logo {
+  height: 85px;
+  width: 160px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Animasi Berjalan */
+.marquee-track.left {
+  animation: scrollLeft 35s linear infinite;
+}
+
+.marquee-track.right {
+  animation: scrollRight 35s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* Responsif untuk layar HP */
+@media (max-width: 768px) {
+  .marquee-content {
+    gap: 24px;
+  }
+  .partner-logo {
+    height: 65px;
+    width: 110px;
+  }
+  .marquee-track {
+    gap: 30px;
+  }
+}
+
+/* ---------- CERTIFICATIONS SLIDER ---------- */
+.cert-slider {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cert-slider::-webkit-scrollbar {
+  height: 6px;
+}
+.cert-slider::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+.cert-slider::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+/* Card Sertifikat */
+.cert-card {
+  flex: 0 0 220px; /* UKURAN DIPERKECIL (sebelumnya 300px) */
+  scroll-snap-align: start;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: var(--trans);
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--silver);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.cert-img-wrapper {
+  height: 280px; /* MEMBATASI TINGGI AGAR TIDAK TERLALU PANJANG */
+  overflow: hidden;
+  background: #fff;
+  padding: 8px;
+}
+
+.cert-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Menjaga proporsi gambar asli (tidak gepeng) */
+}
+
+.cert-info {
+  padding: 12px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.cert-info h4 {
+  font-size: 0.875rem;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.cert-info span {
+  font-size: 0.7rem;
+  color: var(--silver);
+}
+
+/* Responsif untuk Layar HP */
+@media (max-width: 768px) {
+  .cert-card {
+    flex: 0 0 180px; /* Lebih kecil lagi di HP */
+  }
+  .cert-img-wrapper {
+    height: 230px; /* Tinggi gambar di HP */
+  }
+}
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
