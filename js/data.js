@@ -305,13 +305,111 @@ const PRODUCT_CATEGORIES = ["All", "Conveyor", "Components", "Equipment", "Fabri
    These are illustrative examples only.
    Replace with actual company project documentation when available. */
 const PROJECTS = [
+  // --- PROYEK BARU (2026) ---
+  {
+    id: "project-pagar",
+    title: "Pembangunan Pagar & Struktur",
+    category: "Engineering",
+    year: "2026",
+    description: "",
+    image: "assets/images/projects/proyek-pagar.jpg"
+  },
+  {
+    id: "project-panel",
+    title: "Instalasi Panel Listrik",
+    category: "Electrical",
+    year: "2026",
+    description: "",
+    image: "assets/images/projects/proyek-panel.jpg"
+  },
+  {
+    id: "project-pengecoran",
+    title: "Pengecoran Lantai Pabrik",
+    category: "Fabrication",
+    year: "2026",
+    description: "",
+    image: "assets/images/projects/proyek-pengecoran.jpg"
+  },
+  {
+    id: "project-tank",
+    title: "Instalasi Pipa & Tangki",
+    category: "Maintenance",
+    year: "2026",
+    description: "",
+    image: "assets/images/projects/proyek-tank.jpg"
+  },
+  {
+    id: "project-lantai-hijau",
+    title: "Epoxy Lantai Area Produksi",
+    category: "Fabrication",
+    year: "2026",
+    description: "",
+    image: "assets/images/projects/proyek-lantai-hijau.jpg"
+  },
+  {
+    id: "project-crane",
+    title: "Pengangkatan Material Baja",
+    category: "Engineering",
+    year: "2026",
+    description: "",
+    image: "assets/images/projects/proyek-crane.jpg"
+  },
+  {
+    id: "project-manhole",
+    title: "Perbaikan Manhole Tangki",
+    category: "Maintenance",
+    year: "2026",
+    description: "",
+    image: "assets/images/projects/proyek-manhole.jpg"
+  },
+  {
+    id: "project-cat",
+    title: "Pengecatan & Coating Industri",
+    category: "Fabrication",
+    year: "2026",
+    description: "",
+    image: "assets/images/projects/proyek-cat.jpg"
+  },
+  {
+    id: "project-forklift",
+    title: "Pengiriman Panel Box",
+    category: "Electrical",
+    year: "2026",
+    description: "",
+    image: "assets/images/projects/proyek-forklift.jpg"
+  },
+  {
+    id: "project-semen",
+    title: "Pekerjaan Struktur & Scaffolding",
+    category: "Engineering",
+    year: "2026",
+    description: "",
+    image: "assets/images/projects/proyek-semen.jpg"
+  },
+  {
+    id: "project-bekisting",
+    title: "Pembuatan Bekisting Beton",
+    category: "Fabrication",
+    year: "2026",
+    description: "",
+    image: "assets/images/projects/proyek-bekisting.jpg"
+  },
+  {
+    id: "project-instalasi-atas",
+    title: "Pemasangan Instalasi Atas",
+    category: "Electrical",
+    year: "2026",
+    description: "",
+    image: "assets/images/projects/proyek-instalasi-atas.jpg"
+  },
+
+  // --- PROYEK LAMA (Contoh/Placeholder) ---
   {
     id: "project-1",
     title: "Industrial Line Support",
     category: "Maintenance",
     year: "2024",
-    description:
-      "Illustrative placeholder — maintenance support for an industrial production line. Replace with verified company project data.",
+    description: "Ilustrasi dukungan pemeliharaan jalur produksi.",
     image: "assets/images/projects/project-1.jpg"
   },
   {
@@ -319,8 +417,7 @@ const PROJECTS = [
     title: "Custom Fabrication Work",
     category: "Fabrication",
     year: "2024",
-    description:
-      "Illustrative placeholder — fabrication of custom metal components. Replace with verified company project data.",
+    description: "Ilustrasi fabrikasi komponen logam.",
     image: "assets/images/projects/project-2.jpg"
   },
   {
@@ -328,36 +425,8 @@ const PROJECTS = [
     title: "Machinery Installation",
     category: "Engineering",
     year: "2023",
-    description:
-      "Illustrative placeholder — installation support for industrial machinery. Replace with verified company project data.",
+    description: "Ilustrasi instalasi mesin industri.",
     image: "assets/images/projects/project-3.jpg"
-  },
-  {
-    id: "project-4",
-    title: "Electrical System Support",
-    category: "Electrical",
-    year: "2023",
-    description:
-      "Illustrative placeholder — electrical system support for a facility. Replace with verified company project data.",
-    image: "assets/images/projects/project-4.jpg"
-  },
-  {
-    id: "project-5",
-    title: "Conveyor System Work",
-    category: "Fabrication",
-    year: "2023",
-    description:
-      "Illustrative placeholder — conveyor system fabrication and support. Replace with verified company project data.",
-    image: "assets/images/projects/project-5.jpg"
-  },
-  {
-    id: "project-6",
-    title: "Equipment Supply",
-    category: "Engineering",
-    year: "2022",
-    description:
-      "Illustrative placeholder — industrial equipment supply coordination. Replace with verified company project data.",
-    image: "assets/images/projects/project-6.jpg"
   }
 ];
 

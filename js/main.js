@@ -486,6 +486,36 @@
     });
   }
   
+  /* ---------- Certificate Modal (Pop-up) ---------- */
+  function initCertModal() {
+    if (!document.getElementById('cert-modal')) {
+      const modal = document.createElement('div');
+      modal.id = 'cert-modal';
+      // Styling pop-up (z-index ditaruh paling atas)
+      modal.style.cssText = 'position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.9);display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(5px);cursor:zoom-out;';
+      
+      modal.innerHTML = `
+        <button onclick="document.getElementById('cert-modal').style.display='none'" style="position:absolute;top:20px;right:20px;background:#fff;color:#000;border:none;width:44px;height:44px;border-radius:50%;font-size:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.5);">&times;</button>
+        <img id="cert-modal-img" src="" style="max-width:100%;max-height:90vh;object-fit:contain;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,0.5);background:#fff;padding:10px;">
+      `;
+      document.body.appendChild(modal);
+
+      // Menutup modal jika area hitam di luar gambar diklik
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.style.display = 'none';
+      });
+    }
+  }
+
+  // Fungsi global untuk memanggil modal
+  window.openCertModal = function(imageSrc) {
+    const modal = document.getElementById('cert-modal');
+    const img = document.getElementById('cert-modal-img');
+    if (modal && img) {
+      img.src = imageSrc;
+      modal.style.display = 'flex';
+    }
+  };
   /* ---------- Sound Effects ---------- */
   function initSoundEffects() {
     const audio = new Audio('assets/sound.mp3');
@@ -550,5 +580,6 @@
     initImageFallback();    
     initReveal();
     initSoundEffects();
+    initCertModal();
   });
 })();
